@@ -278,6 +278,300 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/23/U盘格式化相关/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小淫娃">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/cat-girls-anime-girls-nekomimi-big-eyes-look-anime-2K-wallpaper-middle-size.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="在下小淫娃">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/23/U盘格式化相关/" itemprop="url">U盘格式化相关</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-23T23:27:40+08:00">
+                2017-11-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/过程方法集/" itemprop="url" rel="index">
+                    <span itemprop="name">过程方法集</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="文件系统的区别"><a href="#文件系统的区别" class="headerlink" title="文件系统的区别"></a>文件系统的区别</h1><p>Windows 10 中的 U 盘可以格式化为 FAT32、NTFS 和 exFAT 这三种格式，下面是这三种文件系统的优劣对比：</p>
+<table>
+<thead>
+<tr>
+<th>文件系统</th>
+<th>优点</th>
+<th>缺点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FAT32</td>
+<td>兼容主流操作系统    使用内存较少</td>
+<td>单个文件不能大于 4GB    限制分区大小（32GB）</td>
+<td>可移动存储设备，如 U 盘、SD 卡    需要跨操作系统平台使用</td>
+</tr>
+<tr>
+<td>NTFS</td>
+<td>可创建大于 32GB 的分区    可读/写单个大于 4GB 的文件    支持 NTFS 压缩和 EFS 加密</td>
+<td>有限的跨平台兼容性</td>
+<td>内部磁盘    Windows 系统分区</td>
+</tr>
+<tr>
+<td>exFAT</td>
+<td>文件和分区大小不受限制</td>
+<td>exFAT 在兼容 Linux 时可能需要安装驱动程序</td>
+<td>外部磁盘    单文件需要大于 4GB 的超大外部存储</td>
+</tr>
+</tbody>
+</table>
+<h1 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h1><h2 id="使用资源管理器或者磁盘管理器快速格式化"><a href="#使用资源管理器或者磁盘管理器快速格式化" class="headerlink" title="使用资源管理器或者磁盘管理器快速格式化"></a>使用资源管理器或者磁盘管理器快速格式化</h2><p><strong>文件系统：</strong>根据需要选择；<br><strong>分配单元大小：</strong>所谓分配单元大小，即是系统对磁盘以及移动存储设备进行读写的最小单位。在极限速度以内，分配单元大小越大读写速度越快，反之则越慢；但是，单元分配越大越会造成空间的浪费<br><strong>格式化选项：</strong>勾选「快速格式化」则不会对坏扇区进行扫描，如果你的存储或 U 盘有故障，可以取消该选项让 Windows 10进行彻底扫描。</p>
+<h2 id="使用diskpart命令格式化U盘"><a href="#使用diskpart命令格式化U盘" class="headerlink" title="使用diskpart命令格式化U盘"></a>使用diskpart命令格式化U盘</h2><p>1.打开「命令提示符（管理员）」工具;<br>2.执行<code>diskpart</code>命令进行交互环境;<br>3.执行<code>list disk</code>命令查看当前 PC 连接的磁盘;<br>4.使用<code>select disk &lt;磁盘号&gt;</code>命令选中你的 U 盘;<br>5.执行<code>clean</code>命令清空 U 盘;<br>6.创建一个新的主分区:    <code>create partition primary</code><br>  （可选）标记活动分区：<code>active</code><br>    标记为活动分区，可方便制作ISO映像启动盘。<br>7.快速格式化：<br>    <code>format fs=&lt;文件系统&gt; label=”卷标” quick</code><br>8.分配一个盘符：<br>    <code>assign</code></p>
+<h1 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h1><p><a href="https://www.sysgeek.cn/format-usb-drives-windows-10/" target="_blank" rel="external">如何在Windows 10中更专业地格式化U盘</a><br><a href="https://jingyan.baidu.com/article/148a1921b853c34d71c3b197.html" target="_blank" rel="external">U盘分配单元大小设多少最佳</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/22/java中数据的强制转换/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小淫娃">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/cat-girls-anime-girls-nekomimi-big-eyes-look-anime-2K-wallpaper-middle-size.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="在下小淫娃">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/22/java中数据的强制转换/" itemprop="url">java中数据的强制转换</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-22T18:27:28+08:00">
+                2017-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/22/java编码问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1201,7 +1495,7 @@
             
               <a href="/archives/ || archive">
             
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1212,7 +1506,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1223,7 +1517,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
