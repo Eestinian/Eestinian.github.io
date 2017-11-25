@@ -383,19 +383,24 @@
 <tbody>
 <tr>
 <td>FAT32</td>
-<td>兼容主流操作系统  </td>
+<td>兼容主流操作系统<br>使用内存较少</td>
+<td>单个文件不能大于4GB<br>限制分区大小（32GB）</td>
+<td>可移动存储设备，如 U 盘、SD 卡<br>需要跨操作系统平台使用</td>
 </tr>
 <tr>
-<td>使用内存较少</td>
-<td>单个文件不能大于4GB  </td>
+<td>NTFS</td>
+<td>可创建大于 32GB 的分区<br>可读/写单个大于 4GB 的文件<br>支持 NTFS 压缩和 EFS 加密</td>
+<td>有限的跨平台兼容性</td>
+<td>内部磁盘<br>Windows 系统分区</td>
 </tr>
 <tr>
-<td>限制分区大小（32GB）</td>
-<td>可移动存储设备，如 U 盘、SD 卡  </td>
+<td>exFAT</td>
+<td>文件和分区大小不受限制</td>
+<td>exFAT 在兼容 Linux 时可能需要安装驱动程序</td>
+<td>外部磁盘<br>单文件需要大于 4GB 的超大外部存储</td>
 </tr>
 </tbody>
 </table>
-<p>需要跨操作系统平台使用<br>NTFS | 可创建大于 32GB 的分区<br>可读/写单个大于 4GB 的文件<br>支持 NTFS 压缩和 EFS 加密 | 有限的跨平台兼容性 | 内部磁盘<br>Windows 系统分区<br>exFAT | 文件和分区大小不受限制 | exFAT 在兼容 Linux 时可能需要安装驱动程序 | 外部磁盘<br>单文件需要大于 4GB 的超大外部存储</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/23/U盘格式化相关/#more" rel="contents">
