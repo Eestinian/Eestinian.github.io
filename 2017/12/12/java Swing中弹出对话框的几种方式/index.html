@@ -95,18 +95,18 @@
 
 
 
-<meta name="description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为**四类**： ConfirmDialog   //确认对话框，由用户来确认(比如按&amp;quot;Yes&amp;quot;或&amp;quot;No&amp;quot;按钮)  InputDialog     //提示输入对话框 MessageDialog   //显示信息对话框 Opti">
+<meta name="description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为四类：    ConfirmDialog   //确认对话框，由用户来确认(比如按”Yes”或”No”按钮)    InputDialog     //提示输入对话框    MessageDialog   //显示信息对话框    OptionDialog    /">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java Swing中弹出对话框的几种方式">
 <meta property="og:url" content="http://yoursite.com/2017/12/12/java Swing中弹出对话框的几种方式/index.html">
 <meta property="og:site_name" content="在下小淫娃">
-<meta property="og:description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为**四类**： ConfirmDialog   //确认对话框，由用户来确认(比如按&amp;quot;Yes&amp;quot;或&amp;quot;No&amp;quot;按钮)  InputDialog     //提示输入对话框 MessageDialog   //显示信息对话框 Opti">
+<meta property="og:description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为四类：    ConfirmDialog   //确认对话框，由用户来确认(比如按”Yes”或”No”按钮)    InputDialog     //提示输入对话框    MessageDialog   //显示信息对话框    OptionDialog    /">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-12T12:18:59.276Z">
+<meta property="og:updated_time" content="2017-12-13T02:25:17.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java Swing中弹出对话框的几种方式">
-<meta name="twitter:description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为**四类**： ConfirmDialog   //确认对话框，由用户来确认(比如按&amp;quot;Yes&amp;quot;或&amp;quot;No&amp;quot;按钮)  InputDialog     //提示输入对话框 MessageDialog   //显示信息对话框 Opti">
+<meta name="twitter:description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为四类：    ConfirmDialog   //确认对话框，由用户来确认(比如按”Yes”或”No”按钮)    InputDialog     //提示输入对话框    MessageDialog   //显示信息对话框    OptionDialog    /">
 
 
 
@@ -338,6 +338,17 @@
 
                 
                 
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码积累集/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
               
             </span>
           
@@ -369,26 +380,19 @@
 
       
         <p>通过导入JOptionPane类来实现弹出对话框的功能<br>    <code>import javax.swing.JOptionPane;</code></p>
-<pre><code>大体分为**四类**：
-ConfirmDialog   //确认对话框，由用户来确认(比如按&quot;Yes&quot;或&quot;No&quot;按钮) 
-InputDialog     //提示输入对话框
-MessageDialog   //显示信息对话框
-OptionDialog    //组合其他三个对话框
-
-上述对话框采用show&lt;类型&gt;Dialog()的方法来使用，例如，`showMessageDialog()`弹出对话框显示信息
-</code></pre><a id="more"></a>
-<pre><code>其中参数说明如下：（详细解释可以参见参考链接）
----
-1. ParentComponent：指示对话框的父窗口对象，一般为当前窗口。也可以为null即采用缺省的Frame作为父窗口，此时对话框将设置在屏幕的正中。 
-</code></pre><p>　　2. message：指示要在对话框内显示的描述性的文字 </p>
-<p>　　3. String title：标题条文字串。 </p>
-<p>　　4. Component：在对话框内要显示的组件(如按钮) </p>
-<p>　　5. Icon：在对话框内要显示的图标 </p>
-<p>　　6. messageType：一般可以为如下的值ERROR_MESSAGE、INFORMATION_MESSAGE、WARNING_MESSAGE、QUESTION_MESSAGE、PLAIN_MESSAGE、 </p>
-<p>　　7. optionType：它决定在对话框的底部所要显示的按钮选项。一般可以为DEFAULT_OPTION、YES_NO_OPTION、YES_NO_CANCEL_OPTION、OK_CANCEL_OPTION。 </p>
-<pre><code>常用的实例：
-----
-####提示信息
+<p>大体分为<strong>四类</strong>：<br>    ConfirmDialog   //确认对话框，由用户来确认(比如按”Yes”或”No”按钮)<br>    InputDialog     //提示输入对话框<br>    MessageDialog   //显示信息对话框<br>    OptionDialog    //组合其他三个对话框</p>
+<p>上述对话框采用show&lt;类型&gt;Dialog()的方法来使用，例如，<code>showMessageDialog()</code>弹出对话框显示信息</p>
+<a id="more"></a>
+<h2 id="其中参数说明如下：（详细解释可以参见参考链接）"><a href="#其中参数说明如下：（详细解释可以参见参考链接）" class="headerlink" title="其中参数说明如下：（详细解释可以参见参考链接）"></a>其中参数说明如下：（详细解释可以参见参考链接）</h2><ol>
+<li>ParentComponent：指示对话框的父窗口对象，一般为当前窗口。也可以为null即采用缺省的Frame作为父窗口，此时对话框将设置在屏幕的正中。</li>
+<li>message：指示要在对话框内显示的描述性的文字 </li>
+<li>String title：标题条文字串。</li>
+<li>Component：在对话框内要显示的组件(如按钮) </li>
+<li>Icon：在对话框内要显示的图标 </li>
+<li>messageType：一般可以为如下的值ERROR_MESSAGE、INFORMATION_MESSAGE、WARNING_MESSAGE、QUESTION_MESSAGE、PLAIN_MESSAGE、 </li>
+<li>optionType：它决定在对话框的底部所要显示的按钮选项。一般可以为DEFAULT_OPTION、YES_NO_OPTION、YES_NO_CANCEL_OPTION、OK_CANCEL_OPTION。 </li>
+</ol>
+<h2 id="常用的实例："><a href="#常用的实例：" class="headerlink" title="常用的实例："></a>常用的实例：</h2><pre><code>####提示信息
 JOptionPane.showMessageDialog(null,&quot;输出的内容&quot;);
 
 ####要求输入提示
@@ -439,7 +443,7 @@ possibleValues, possibleValues[0]);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/12/调式/" rel="next" title="简要说明调式">
+              <a href="/2017/12/12/简要说明调式/" rel="next" title="简要说明调式">
                 <i class="fa fa-chevron-left"></i> 简要说明调式
               </a>
             
@@ -583,7 +587,7 @@ possibleValues, possibleValues[0]);
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">1.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#其中参数说明如下：（详细解释可以参见参考链接）"><span class="nav-number">1.</span> <span class="nav-text">其中参数说明如下：（详细解释可以参见参考链接）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的实例："><span class="nav-number">2.</span> <span class="nav-text">常用的实例：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number"></span> <span class="nav-text">参考链接</span></a></div>
             
 
           </div>

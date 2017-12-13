@@ -339,6 +339,17 @@
 
                 
                 
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/代码积累集/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
               
             </span>
           
@@ -371,14 +382,8 @@
       
         
           <p>通过导入JOptionPane类来实现弹出对话框的功能<br>    <code>import javax.swing.JOptionPane;</code></p>
-<pre><code>大体分为**四类**：
-ConfirmDialog   //确认对话框，由用户来确认(比如按&quot;Yes&quot;或&quot;No&quot;按钮) 
-InputDialog     //提示输入对话框
-MessageDialog   //显示信息对话框
-OptionDialog    //组合其他三个对话框
-
-上述对话框采用show&lt;类型&gt;Dialog()的方法来使用，例如，`showMessageDialog()`弹出对话框显示信息
-</code></pre>
+<p>大体分为<strong>四类</strong>：<br>    ConfirmDialog   //确认对话框，由用户来确认(比如按”Yes”或”No”按钮)<br>    InputDialog     //提示输入对话框<br>    MessageDialog   //显示信息对话框<br>    OptionDialog    //组合其他三个对话框</p>
+<p>上述对话框采用show&lt;类型&gt;Dialog()的方法来使用，例如，<code>showMessageDialog()</code>弹出对话框显示信息</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/12/12/java Swing中弹出对话框的几种方式/#more" rel="contents">
@@ -432,7 +437,7 @@ OptionDialog    //组合其他三个对话框
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/12/调式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/12/简要说明调式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小淫娃">
@@ -451,7 +456,7 @@ OptionDialog    //组合其他三个对话框
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/12/调式/" itemprop="url">简要说明调式</a></h1>
+                <a class="post-title-link" href="/2017/12/12/简要说明调式/" itemprop="url">简要说明调式</a></h1>
         
 
         <div class="post-meta">
@@ -528,7 +533,7 @@ OptionDialog    //组合其他三个对话框
 <p>即结构为：“全音、全音、半音、全音、全音、全音、半音”<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/12/12/调式/#more" rel="contents">
+            <a class="btn" href="/2017/12/12/简要说明调式/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -869,36 +874,15 @@ OptionDialog    //组合其他三个对话框
 
       
         
-          
-            <h1 id="自动转换"><a href="#自动转换" class="headerlink" title="自动转换"></a>自动转换</h1><pre><code>程序执行时自动执行，基本类型由低级到高级分别为(byte，short，char)--int--long--float--double
-一般时低位数类型向高位数类型转换，转换关系如下：
-![转换关系](../../public/images/TIM图片20171212210058.png)
-
-— 对于byte,short,char三种类型而言，他们是平级的，不能相互自动转换，需要使用强制转换
-</code></pre><h1 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h1><pre><code>(转换后的类型)转换前的类型
-**可能会发生精度丢失**
-</code></pre><h1 id="包装类过渡类型转换"><a href="#包装类过渡类型转换" class="headerlink" title="包装类过渡类型转换"></a>包装类过渡类型转换</h1><p>所谓包装类，就是可以直接将简单类型的变量表示为一个类<br>Java共有六个包装类，分别是Boolean、Character、Integer、Long、Float和Double；分别对应于 boolean、char、int、long、float和double。而String和Date本身就是类</p>
-<p>简单类型的变量转换为相应的包装类，可以利用包装类的构造函数。即：<br>Boolean(boolean value)、Character(char value)、Integer(int value)、Long(long value)、Float(float value)、Double(double value)</p>
-<p>在各个包装类中，总有形为&lt;数据类型&gt;Value()的方法<br>例如，<code>intValue()</code>，调用该方法可以得到整型变量。</p>
-<h1 id="字符串型与其它数据类型的转换"><a href="#字符串型与其它数据类型的转换" class="headerlink" title="字符串型与其它数据类型的转换"></a>字符串型与其它数据类型的转换</h1><p>调用<code>toString()</code>方法，基本所有java.lang.Object类派生的所有类均提供该方法</p>
-<h1 id="常用实例"><a href="#常用实例" class="headerlink" title="常用实例"></a>常用实例</h1><h2 id="String转int"><a href="#String转int" class="headerlink" title="String转int"></a>String转int</h2><pre><code>int num1 = Integer.parseInt(number);//使用Integer的parseInt方法
-int num2 = new Integer(number);//强制转换
-num3 = Integer.valueOf(number).intValue();//先转Integer类型，再调用intValue()转为int
-</code></pre><p>String转float和long与上述类似</p>
-<h2 id="String转byte"><a href="#String转byte" class="headerlink" title="String转byte[]"></a>String转byte[]</h2><p>使用String类自带的<code>getBytes()</code>方法</p>
-<h2 id="byte-转String"><a href="#byte-转String" class="headerlink" title="byte[]转String"></a>byte[]转String</h2><pre><code>byte[] number = &quot;121121&quot;.getBytes();
-String num1 = new String(number);
-</code></pre><h2 id="path类型转String"><a href="#path类型转String" class="headerlink" title="path类型转String"></a>path类型转String</h2><pre><code>String fileName=path.getFileName().toString();
-</code></pre><h2 id="int转String"><a href="#int转String" class="headerlink" title="int转String"></a>int转String</h2><pre><code>String num1 = Integer.toString(number);//使用Integer的toString方法
-String num2 = String.valueOf(number);//使用String的valueOf方法
-String num3 = &quot;&quot; + number;//强制转换
-</code></pre><h2 id="long-int互转"><a href="#long-int互转" class="headerlink" title="long-int互转"></a>long-int互转</h2><pre><code>int num2 = new Long(number).intValue();// 调用intValue方法
-
-long num3 = Long.valueOf(number);
-</code></pre><p>其实他俩用普通的强制转换就可以了。</p>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://my.oschina.net/u/3060369/blog/1486183" target="_blank" rel="external">Java数据类型转换详解</a><br><a href="http://matt33.com/2015/10/27/TheTransformOfJava/" target="_blank" rel="external">Java的几个基本类型之间的相互转换</a></p>
-
-          
+          <h1 id="自动转换"><a href="#自动转换" class="headerlink" title="自动转换"></a>自动转换</h1><p>程序执行时自动执行，基本类型由低级到高级分别为(byte，short，char)–int–long–float–double</p>
+<p>一般时低位数类型向高位数类型转换，转换关系如下：<br><img src="../../public/images/TIM图片20171212210058.png" alt="转换关系"></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/22/java中数据的强制转换/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1048,7 +1032,12 @@ long num3 = Long.valueOf(number);
 
       
         
-          <h2 id="cmd控制台添加utf-8编码方式"><a href="#cmd控制台添加utf-8编码方式" class="headerlink" title="cmd控制台添加utf-8编码方式"></a>cmd控制台添加utf-8编码方式</h2><p>按下快捷键Win+R，输入regedit打开注册变编辑器，依次找到<br><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\</code><br>右键新建一个字符串值(S),取名叫Autorun,值设为@chcp 65001&gt;nul<br>确定保存退出<br>重新运行程序即可</p>
+          <h2 id="cmd控制台添加utf-8编码方式"><a href="#cmd控制台添加utf-8编码方式" class="headerlink" title="cmd控制台添加utf-8编码方式"></a>cmd控制台添加utf-8编码方式</h2><ul>
+<li>按下快捷键Win+R，输入regedit打开注册变编辑器，依次找到<br>  HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\</li>
+<li>右键新建一个字符串值(S),取名叫Autorun,值设为@chcp 65001&gt;nul</li>
+<li>确定保存退出</li>
+<li>重新运行程序即可</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/22/java编码问题/#more" rel="contents">

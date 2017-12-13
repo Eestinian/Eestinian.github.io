@@ -95,18 +95,18 @@
 
 
 
-<meta name="description" content="cmd控制台添加utf-8编码方式按下快捷键Win+R，输入regedit打开注册变编辑器，依次找到HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\右键新建一个字符串值(S),取名叫Autorun,值设为@chcp 65001&amp;gt;nul确定保存退出重新运行程序即可">
+<meta name="description" content="cmd控制台添加utf-8编码方式 按下快捷键Win+R，输入regedit打开注册变编辑器，依次找到  HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\ 右键新建一个字符串值(S),取名叫Autorun,值设为@chcp 65001&amp;gt;nul 确定保存退出 重新运行程序即可">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java编码问题">
 <meta property="og:url" content="http://yoursite.com/2017/11/22/java编码问题/index.html">
 <meta property="og:site_name" content="在下小淫娃">
-<meta property="og:description" content="cmd控制台添加utf-8编码方式按下快捷键Win+R，输入regedit打开注册变编辑器，依次找到HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\右键新建一个字符串值(S),取名叫Autorun,值设为@chcp 65001&amp;gt;nul确定保存退出重新运行程序即可">
+<meta property="og:description" content="cmd控制台添加utf-8编码方式 按下快捷键Win+R，输入regedit打开注册变编辑器，依次找到  HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\ 右键新建一个字符串值(S),取名叫Autorun,值设为@chcp 65001&amp;gt;nul 确定保存退出 重新运行程序即可">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-22T08:46:11.085Z">
+<meta property="og:updated_time" content="2017-12-13T02:31:26.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java编码问题">
-<meta name="twitter:description" content="cmd控制台添加utf-8编码方式按下快捷键Win+R，输入regedit打开注册变编辑器，依次找到HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\右键新建一个字符串值(S),取名叫Autorun,值设为@chcp 65001&amp;gt;nul确定保存退出重新运行程序即可">
+<meta name="twitter:description" content="cmd控制台添加utf-8编码方式 按下快捷键Win+R，输入regedit打开注册变编辑器，依次找到  HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\ 右键新建一个字符串值(S),取名叫Autorun,值设为@chcp 65001&amp;gt;nul 确定保存退出 重新运行程序即可">
 
 
 
@@ -379,7 +379,12 @@
       
 
       
-        <h2 id="cmd控制台添加utf-8编码方式"><a href="#cmd控制台添加utf-8编码方式" class="headerlink" title="cmd控制台添加utf-8编码方式"></a>cmd控制台添加utf-8编码方式</h2><p>按下快捷键Win+R，输入regedit打开注册变编辑器，依次找到<br><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\</code><br>右键新建一个字符串值(S),取名叫Autorun,值设为@chcp 65001&gt;nul<br>确定保存退出<br>重新运行程序即可</p>
+        <h2 id="cmd控制台添加utf-8编码方式"><a href="#cmd控制台添加utf-8编码方式" class="headerlink" title="cmd控制台添加utf-8编码方式"></a>cmd控制台添加utf-8编码方式</h2><ul>
+<li>按下快捷键Win+R，输入regedit打开注册变编辑器，依次找到<br>  HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\</li>
+<li>右键新建一个字符串值(S),取名叫Autorun,值设为@chcp 65001&gt;nul</li>
+<li>确定保存退出</li>
+<li>重新运行程序即可</li>
+</ul>
 <a id="more"></a>
 <h2 id="控制台更换编码方式命令"><a href="#控制台更换编码方式命令" class="headerlink" title="控制台更换编码方式命令"></a>控制台更换编码方式命令</h2><pre><code>chcp &lt;字符集编码&gt;
 </code></pre><h3 id="代码页表"><a href="#代码页表" class="headerlink" title="代码页表"></a>代码页表</h3><p>代码页       国家(地区)或语言<br>437          美国<br>708          阿拉伯文(ASMO 708)<br>720          阿拉伯文(DOS)<br>850          多语言(拉丁文 I)<br>852          中欧(DOS) - 斯拉夫语(拉丁文 II)<br>855          西里尔文(俄语)<br>857          土耳其语<br>860          葡萄牙语<br>861          冰岛语<br>862          希伯来文(DOS)<br>863          加拿大 - 法语<br>865          日耳曼语<br>866          俄语 - 西里尔文(DOS)<br>869          现代希腊语<br>874          泰文(Windows)<br>932          日文(Shift-JIS)<br>936          中国 - 简体中文(GB2312)<br>949          韩文<br>950          繁体中文(Big5)<br>1200         Unicode<br>1201         Unicode (Big-Endian)<br>1250         中欧(Windows)<br>1251         西里尔文(Windows)<br>1252         西欧(Windows)<br>1253         希腊文(Windows)<br>1254         土耳其文(Windows)<br>1255         希伯来文(Windows)<br>1256         阿拉伯文(Windows)<br>1257         波罗的海文(Windows)<br>1258         越南文(Windows)<br>20866        西里尔文(KOI8-R)<br>21866        西里尔文(KOI8-U)<br>28592        中欧(ISO)<br>28593        拉丁文 3 (ISO)<br>28594        波罗的海文(ISO)<br>28595        西里尔文(ISO)<br>28596        阿拉伯文(ISO)<br>28597        希腊文(ISO)<br>28598        希伯来文(ISO-Visual)<br>38598        希伯来文(ISO-Logical)<br>50000        用户定义的<br>50001        自动选择<br>50220        日文(JIS)<br>50221        日文(JIS-允许一个字节的片假名)<br>50222        日文(JIS-允许一个字节的片假名 - SO/SI)<br>50225        韩文(ISO)<br>50932        日文(自动选择)<br>50949        韩文(自动选择)<br>51932        日文(EUC)<br>51949        韩文(EUC)<br>52936        简体中文(HZ)<br>65000        Unicode (UTF-7)<br>65001        Unicode (UTF-8)</p>
