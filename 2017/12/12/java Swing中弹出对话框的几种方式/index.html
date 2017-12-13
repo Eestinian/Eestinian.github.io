@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="在下小淫娃">
 <meta property="og:description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为四类： ConfirmDialog   //确认对话框，由用户来确认(比如按&amp;quot;Yes&amp;quot;或&amp;quot;No&amp;quot;按钮)  InputDialog     //提示输入对话框 MessageDialog   //显示信息对话框 OptionDi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-13T02:46:10.066Z">
+<meta property="og:updated_time" content="2017-12-13T03:00:52.650Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java Swing中弹出对话框的几种方式">
 <meta name="twitter:description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为四类： ConfirmDialog   //确认对话框，由用户来确认(比如按&amp;quot;Yes&amp;quot;或&amp;quot;No&amp;quot;按钮)  InputDialog     //提示输入对话框 MessageDialog   //显示信息对话框 OptionDi">
@@ -396,12 +396,18 @@ OptionDialog    //组合其他三个对话框
 <li>messageType：一般可以为如下的值ERROR_MESSAGE、INFORMATION_MESSAGE、WARNING_MESSAGE、QUESTION_MESSAGE、PLAIN_MESSAGE、 </li>
 <li>optionType：它决定在对话框的底部所要显示的按钮选项。一般可以为DEFAULT_OPTION、YES_NO_OPTION、YES_NO_CANCEL_OPTION、OK_CANCEL_OPTION。 </li>
 </ol>
-<h2 id="常用的实例："><a href="#常用的实例：" class="headerlink" title="常用的实例："></a>常用的实例：</h2><p>####提示信息<br>    JOptionPane.showMessageDialog(null,”输出的内容”);</p>
-<p>####要求输入提示<br>    String inputValue = JOptionPane.showInputDialog(“Please input a value”); </p>
-<p>####提示信息，并提供选项<br>    JOptionPane.showConfirmDialog(null, “choose one”, “choose one”, JOptionPane.YES_NO_OPTION); </p>
-<p>####警告信息，提供标题和选项<br>    Object[] options = { “OK”, “CANCEL” };<br>    JOptionPane.showOptionDialog(null, “Click OK to continue”, “Warning”,<br>    JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,<br>    null, options, options[0]); </p>
-<p>####显示一个要求用户选择 String 的对话框<br>    Object[] possibleValues = { “First”, “Second”, “Third” };<br>    Object selectedValue = JOptionPane.showInputDialog(null, “Choose one”, “Input”,<br>    JOptionPane.INFORMATION_MESSAGE, null,<br>    possibleValues, possibleValues[0]);</p>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://blog.csdn.net/zhao50632/article/details/20999173" target="_blank" rel="external">Java Swing中弹出对话框的几种方式</a><br><a href="http://blog.csdn.net/penjie0418/article/details/9257917" target="_blank" rel="external">Java中弹出对话框中的几种方式</a></p>
+<h2 id="常用的实例："><a href="#常用的实例：" class="headerlink" title="常用的实例："></a>常用的实例：</h2><h4 id="提示信息"><a href="#提示信息" class="headerlink" title="提示信息"></a>提示信息</h4><pre><code>JOptionPane.showMessageDialog(null,&quot;输出的内容&quot;);
+</code></pre><h4 id="要求输入提示"><a href="#要求输入提示" class="headerlink" title="要求输入提示"></a>要求输入提示</h4><pre><code>String inputValue = JOptionPane.showInputDialog(&quot;Please input a value&quot;); 
+</code></pre><h4 id="提示信息，并提供选项"><a href="#提示信息，并提供选项" class="headerlink" title="提示信息，并提供选项"></a>提示信息，并提供选项</h4><pre><code>JOptionPane.showConfirmDialog(null, &quot;choose one&quot;, &quot;choose one&quot;, JOptionPane.YES_NO_OPTION); 
+</code></pre><h4 id="警告信息，提供标题和选项"><a href="#警告信息，提供标题和选项" class="headerlink" title="警告信息，提供标题和选项"></a>警告信息，提供标题和选项</h4><pre><code>Object[] options = { &quot;OK&quot;, &quot;CANCEL&quot; }; 
+JOptionPane.showOptionDialog(null, &quot;Click OK to continue&quot;, &quot;Warning&quot;, 
+JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, 
+null, options, options[0]); 
+</code></pre><h4 id="显示一个要求用户选择-String-的对话框"><a href="#显示一个要求用户选择-String-的对话框" class="headerlink" title="显示一个要求用户选择 String 的对话框"></a>显示一个要求用户选择 String 的对话框</h4><pre><code>Object[] possibleValues = { &quot;First&quot;, &quot;Second&quot;, &quot;Third&quot; }; 
+Object selectedValue = JOptionPane.showInputDialog(null, &quot;Choose one&quot;, &quot;Input&quot;, 
+JOptionPane.INFORMATION_MESSAGE, null, 
+possibleValues, possibleValues[0]);
+</code></pre><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://blog.csdn.net/zhao50632/article/details/20999173" target="_blank" rel="external">Java Swing中弹出对话框的几种方式</a><br><a href="http://blog.csdn.net/penjie0418/article/details/9257917" target="_blank" rel="external">Java中弹出对话框中的几种方式</a></p>
 
       
     </div>
@@ -576,7 +582,7 @@ OptionDialog    //组合其他三个对话框
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#其中参数说明如下：（详细解释可以参见参考链接）"><span class="nav-number">1.</span> <span class="nav-text">其中参数说明如下：（详细解释可以参见参考链接）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的实例："><span class="nav-number">2.</span> <span class="nav-text">常用的实例：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number"></span> <span class="nav-text">参考链接</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#其中参数说明如下：（详细解释可以参见参考链接）"><span class="nav-number">1.</span> <span class="nav-text">其中参数说明如下：（详细解释可以参见参考链接）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的实例："><span class="nav-number">2.</span> <span class="nav-text">常用的实例：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#提示信息"><span class="nav-number">2.0.1.</span> <span class="nav-text">提示信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#要求输入提示"><span class="nav-number">2.0.2.</span> <span class="nav-text">要求输入提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提示信息，并提供选项"><span class="nav-number">2.0.3.</span> <span class="nav-text">提示信息，并提供选项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#警告信息，提供标题和选项"><span class="nav-number">2.0.4.</span> <span class="nav-text">警告信息，提供标题和选项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示一个要求用户选择-String-的对话框"><span class="nav-number">2.0.5.</span> <span class="nav-text">显示一个要求用户选择 String 的对话框</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number"></span> <span class="nav-text">参考链接</span></a></div>
             
 
           </div>
