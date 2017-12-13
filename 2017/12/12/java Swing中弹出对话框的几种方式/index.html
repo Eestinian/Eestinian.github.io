@@ -95,18 +95,18 @@
 
 
 
-<meta name="description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为四类：    ConfirmDialog   //确认对话框，由用户来确认(比如按”Yes”或”No”按钮)    InputDialog     //提示输入对话框    MessageDialog   //显示信息对话框    OptionDialog    /">
+<meta name="description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为四类： ConfirmDialog   //确认对话框，由用户来确认(比如按&amp;quot;Yes&amp;quot;或&amp;quot;No&amp;quot;按钮)  InputDialog     //提示输入对话框 MessageDialog   //显示信息对话框 OptionDi">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java Swing中弹出对话框的几种方式">
 <meta property="og:url" content="http://yoursite.com/2017/12/12/java Swing中弹出对话框的几种方式/index.html">
 <meta property="og:site_name" content="在下小淫娃">
-<meta property="og:description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为四类：    ConfirmDialog   //确认对话框，由用户来确认(比如按”Yes”或”No”按钮)    InputDialog     //提示输入对话框    MessageDialog   //显示信息对话框    OptionDialog    /">
+<meta property="og:description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为四类： ConfirmDialog   //确认对话框，由用户来确认(比如按&amp;quot;Yes&amp;quot;或&amp;quot;No&amp;quot;按钮)  InputDialog     //提示输入对话框 MessageDialog   //显示信息对话框 OptionDi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-13T02:25:17.802Z">
+<meta property="og:updated_time" content="2017-12-13T02:46:10.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java Swing中弹出对话框的几种方式">
-<meta name="twitter:description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为四类：    ConfirmDialog   //确认对话框，由用户来确认(比如按”Yes”或”No”按钮)    InputDialog     //提示输入对话框    MessageDialog   //显示信息对话框    OptionDialog    /">
+<meta name="twitter:description" content="通过导入JOptionPane类来实现弹出对话框的功能    import javax.swing.JOptionPane; 大体分为四类： ConfirmDialog   //确认对话框，由用户来确认(比如按&amp;quot;Yes&amp;quot;或&amp;quot;No&amp;quot;按钮)  InputDialog     //提示输入对话框 MessageDialog   //显示信息对话框 OptionDi">
 
 
 
@@ -380,8 +380,12 @@
 
       
         <p>通过导入JOptionPane类来实现弹出对话框的功能<br>    <code>import javax.swing.JOptionPane;</code></p>
-<p>大体分为<strong>四类</strong>：<br>    ConfirmDialog   //确认对话框，由用户来确认(比如按”Yes”或”No”按钮)<br>    InputDialog     //提示输入对话框<br>    MessageDialog   //显示信息对话框<br>    OptionDialog    //组合其他三个对话框</p>
-<p>上述对话框采用show&lt;类型&gt;Dialog()的方法来使用，例如，<code>showMessageDialog()</code>弹出对话框显示信息</p>
+<p>大体分为<strong>四类</strong>：</p>
+<pre><code>ConfirmDialog   //确认对话框，由用户来确认(比如按&quot;Yes&quot;或&quot;No&quot;按钮) 
+InputDialog     //提示输入对话框
+MessageDialog   //显示信息对话框
+OptionDialog    //组合其他三个对话框
+</code></pre><p>上述对话框采用show&lt;类型&gt;Dialog()的方法来使用，例如，<code>showMessageDialog()</code>弹出对话框显示信息</p>
 <a id="more"></a>
 <h2 id="其中参数说明如下：（详细解释可以参见参考链接）"><a href="#其中参数说明如下：（详细解释可以参见参考链接）" class="headerlink" title="其中参数说明如下：（详细解释可以参见参考链接）"></a>其中参数说明如下：（详细解释可以参见参考链接）</h2><ol>
 <li>ParentComponent：指示对话框的父窗口对象，一般为当前窗口。也可以为null即采用缺省的Frame作为父窗口，此时对话框将设置在屏幕的正中。</li>
@@ -392,27 +396,12 @@
 <li>messageType：一般可以为如下的值ERROR_MESSAGE、INFORMATION_MESSAGE、WARNING_MESSAGE、QUESTION_MESSAGE、PLAIN_MESSAGE、 </li>
 <li>optionType：它决定在对话框的底部所要显示的按钮选项。一般可以为DEFAULT_OPTION、YES_NO_OPTION、YES_NO_CANCEL_OPTION、OK_CANCEL_OPTION。 </li>
 </ol>
-<h2 id="常用的实例："><a href="#常用的实例：" class="headerlink" title="常用的实例："></a>常用的实例：</h2><pre><code>####提示信息
-JOptionPane.showMessageDialog(null,&quot;输出的内容&quot;);
-
-####要求输入提示
-String inputValue = JOptionPane.showInputDialog(&quot;Please input a value&quot;); 
-
-####提示信息，并提供选项
-JOptionPane.showConfirmDialog(null, &quot;choose one&quot;, &quot;choose one&quot;, JOptionPane.YES_NO_OPTION); 
-
-####警告信息，提供标题和选项
-Object[] options = { &quot;OK&quot;, &quot;CANCEL&quot; }; 
-JOptionPane.showOptionDialog(null, &quot;Click OK to continue&quot;, &quot;Warning&quot;, 
-JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, 
-null, options, options[0]); 
-
-####显示一个要求用户选择 String 的对话框
-Object[] possibleValues = { &quot;First&quot;, &quot;Second&quot;, &quot;Third&quot; }; 
-Object selectedValue = JOptionPane.showInputDialog(null, &quot;Choose one&quot;, &quot;Input&quot;, 
-JOptionPane.INFORMATION_MESSAGE, null, 
-possibleValues, possibleValues[0]);
-</code></pre><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://blog.csdn.net/zhao50632/article/details/20999173" target="_blank" rel="external">Java Swing中弹出对话框的几种方式</a><br><a href="http://blog.csdn.net/penjie0418/article/details/9257917" target="_blank" rel="external">Java中弹出对话框中的几种方式</a></p>
+<h2 id="常用的实例："><a href="#常用的实例：" class="headerlink" title="常用的实例："></a>常用的实例：</h2><p>####提示信息<br>    JOptionPane.showMessageDialog(null,”输出的内容”);</p>
+<p>####要求输入提示<br>    String inputValue = JOptionPane.showInputDialog(“Please input a value”); </p>
+<p>####提示信息，并提供选项<br>    JOptionPane.showConfirmDialog(null, “choose one”, “choose one”, JOptionPane.YES_NO_OPTION); </p>
+<p>####警告信息，提供标题和选项<br>    Object[] options = { “OK”, “CANCEL” };<br>    JOptionPane.showOptionDialog(null, “Click OK to continue”, “Warning”,<br>    JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,<br>    null, options, options[0]); </p>
+<p>####显示一个要求用户选择 String 的对话框<br>    Object[] possibleValues = { “First”, “Second”, “Third” };<br>    Object selectedValue = JOptionPane.showInputDialog(null, “Choose one”, “Input”,<br>    JOptionPane.INFORMATION_MESSAGE, null,<br>    possibleValues, possibleValues[0]);</p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://blog.csdn.net/zhao50632/article/details/20999173" target="_blank" rel="external">Java Swing中弹出对话框的几种方式</a><br><a href="http://blog.csdn.net/penjie0418/article/details/9257917" target="_blank" rel="external">Java中弹出对话框中的几种方式</a></p>
 
       
     </div>
